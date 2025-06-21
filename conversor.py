@@ -12,9 +12,6 @@ def converter_csv_para_js(arquivo_csv='produtos.CSV', arquivo_js='produtos.js'):
     print(f"Iniciando a leitura do arquivo '{arquivo_csv}'...")
 
     try:
-        # --- ALTERAÇÃO PRINCIPAL AQUI ---
-        # Alterado o encoding de 'utf-8' para 'latin-1' para ler corretamente
-        # arquivos salvos pelo Excel no Windows.
         with open(arquivo_csv, mode='r', encoding='latin-1') as f:
             leitor_csv = csv.DictReader(f, delimiter=';')
 
@@ -45,7 +42,6 @@ def converter_csv_para_js(arquivo_csv='produtos.CSV', arquivo_js='produtos.js'):
         json_produtos = json.dumps(lista_de_produtos, indent=2, ensure_ascii=False)
         conteudo_js = f"const produtos = {json_produtos};"
 
-        # Ao salvar o arquivo .js, mantemos o utf-8 que é o padrão da web
         with open(arquivo_js, 'w', encoding='utf-8') as f:
             f.write(conteudo_js)
 

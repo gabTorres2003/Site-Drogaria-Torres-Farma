@@ -1,5 +1,5 @@
 .modal-overlay {
-  display: none; /* Começa escondido */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -82,7 +82,7 @@
   font-size: 1.1rem;
   font-weight: bold;
   color: white;
-  background-color: #25D366; /* Cor do WhatsApp */
+  background-color: #25D366;
   border: none;
   border-radius: 5px;
   cursor: pointer;

@@ -1,0 +1,17 @@
+:root {
+  --azul-principal: #005a8d;
+  --azul-escuro: #003e6b;
+  --laranja-destaque: #ff6a00;
+  --laranja-hover: #e65f00;
+  --branco: #ffffff;
+  --fundo-site: #f7f9fa;
+  --cinza-claro: #e9ecef;
+  --cinza-medio: #dee2e6;
+  --texto-corpo: #495057;
+  --texto-titulo: #212529;
+  --sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --max-width: 1600px;
+  --padding-lateral: 5vw;
+  --transicao: all 0.3s ease;
+  --border-radius: 12px;
+}

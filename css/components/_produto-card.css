@@ -1,0 +1,111 @@
+.produto-card {
+  min-width: 280px;
+  max-width: 300px;
+  background: var(--branco);
+  border-radius: var(--border-radius);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1),
+    box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  border: 1px solid var(--cinza-medio);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.produto-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.produto-img-container {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--branco);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.produto-img {
+  max-height: 300px;
+  max-width: 300px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.produto-card:hover .produto-img {
+  transform: scale(1.05);
+}
+
+.produto-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.produto-info h3 {
+  color: var(--texto-titulo);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  min-height: 2.6em;
+}
+
+.produto-descricao {
+  color: var(--texto-corpo);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  min-height: 40px;
+  flex-grow: 1;
+}
+
+.produto-preco {
+  color: var(--laranja-destaque);
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin: 0.3rem 0;
+}
+
+.novo-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--laranja-destaque);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+
+/* --- Media Queries --- */
+
+@media (max-width: 480px) {
+  .produto-card {
+    min-width: 230px;
+    max-width: 230px;
+  }
+
+  .produto-img-container {
+    height: 200px;
+  }
+
+  .produto-info {
+    padding: 1rem; 
+  }
+
+  .produto-info h3 {
+    font-size: 1rem;
+  }
+
+  .produto-preco {
+    font-size: 1.3rem;
+  }
+}

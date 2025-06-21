@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contato - Fale com a Drogaria Torres Farma</title>
+  <meta name="description" content="Entre em contato com a Drogaria Torres Farma. Encontre nosso endereço em Campos dos Goytacazes, telefone, WhatsApp ou envie uma mensagem." />
+  <link rel="canonical" href="https://drogariatorresfarma.netlify.app/contato.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://drogariatorresfarma.netlify.app/contato.html" />
+  <meta property="og:title" content="Contato - Fale com a Drogaria Torres Farma" />
+  <meta property="og:description" content="Encontre nosso endereço em Campos dos Goytacazes, telefone, WhatsApp ou envie uma mensagem." />
+  <meta property="og:image" content="https://drogariatorresfarma.netlify.app/assets/img/loja2.jpg" />
+  <meta property="og:site_name" content="Drogaria Torres Farma" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://drogariatorresfarma.netlify.app/contato.html" />
+  <meta property="twitter:title" content="Contato - Fale com a Drogaria Torres Farma" />
+  <meta property="twitter:description" content="Encontre nosso endereço em Campos dos Goytacazes, telefone, WhatsApp ou envie uma mensagem." />
+  <meta property="twitter:image" content="https://drogariatorresfarma.netlify.app/assets/img/loja2.jpg" />
+
+  <link rel="icon" href="assets/img/torresb.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="assets/img/logo-torres.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-principal">
+      <div class="container">
+        <div class="logo-titulo">
+          <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: white;">
+            <img src="assets/img/logo-torres.png" alt="Logo Drogaria Torres Farma" class="logo" />
+            <h1>Drogaria Torres Farma</h1>
+          </a>
+        </div>
+        <div class="search-container">
+          <input type="search" placeholder="O que você procura?" class="search-input" />
+          <button class="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="header-direita">
+          <div class="carrinho-container">
+            <button class="carrinho-btn" aria-label="Carrinho de compras">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="carrinho-quantidade">0</span>
+            </button>
+            <div class="carrinho-dropdown">
+              <div class="carrinho-header">
+                <h4>Meu Carrinho</h4>
+                <button class="btn-fechar-carrinho" aria-label="Fechar carrinho">&times;</button>
+              </div>
+              <div class="carrinho-items">
+                <p class="carrinho-vazio">Seu carrinho está vazio</p>
+              </div>
+              <div class="carrinho-total">
+                <p>Total: <span>R$ 0,00</span></p>
+                <div class="carrinho-botoes-container">
+                  <button class="btn-esvaziar-carrinho">Esvaziar</button>
+                  <button class="btn-finalizar">Finalizar Compra</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="menu-toggle" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="header-nav">
+      <div class="container">
+        <nav class="menu">
+          <div class="dropdown">
+            <button class="dropdown-btn">
+              Departamentos <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="index.html#produtos">Produtos em Promoção</a>
+              <a href="index.html#mais-vendidos">Mais Vendidos</a>
+              <a href="index.html#novidades">Novidades</a>
+              <a href="index.html#genericos">Genéricos</a>
+              <a href="index.html#vitaminas-suplementos">Vitaminas e Suplementos</a>
+              <a href="index.html#mamae-bebe">Cuidados para Mamãe e Bebê</a>
+              <a href="index.html#higiene-pessoal">Higiene Pessoal</a>
+              <a href="index.html#saude-feminina">Saúde Feminina</a>
+              <a href="index.html#primeiros-socorros">Primeiros Socorros</a>
+            </div>
+          </div>
+          <a href="sobre.html">Sobre Nós</a>
+          <a href="sobre.html">Loja</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 2rem; padding-bottom: 2rem">
+    <section class="contact-form">
+      <h2>Entre em Contato</h2>
+      <p style="text-align: center; margin-bottom: 2rem">
+        Tem alguma dúvida, sugestão ou precisa de ajuda? Preencha o formulário
+        abaixo ou utilize nossos outros canais de atendimento.
+      </p>
+      <form id="formContatoWhatsApp">
+        <div class="form-group">
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Seu E-mail:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone (Opcional):</label>
+          <input type="tel" id="telefone" name="telefone" />
+        </div>
+        <div class="form-group">
+          <label for="assunto">Assunto:</label>
+          <input type="text" id="assunto" name="assunto" required />
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Sua Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-enviar">
+          Enviar Mensagem via WhatsApp
+        </button>
+      </form>
+    </section>
+
+    <section class="contact-info">
+      <h3>Outras Formas de Contato</h3>
+      <p>
+        <strong>Endereço:</strong> Rua Dr. Beda, 652 - Parque Aurora, Campos
+        dos Goytacazes - RJ, 28026-592
+      </p>
+      <p><strong>Telefone Fixo:</strong> (22) 2726-4892</p>
+      <p>
+        <strong>WhatsApp:</strong>
+        <a href="https://wa.me/5522999404155" target="_blank" rel="noopener noreferrer">(22) 99940-4155</a>
+      </p>
+      <p>
+        <strong>E-mail:</strong>
+        <a href="mailto:drogariatorresfarma@gmail.com">drogariatorresfarma@gmail.com</a>
+      </p>
+      <p>
+        <strong>Horário de Atendimento:</strong> Segunda a Sábado: 07:30h às
+        22h. Domingos e Feriados: 08h às 14h
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-coluna">
+        <h4>Drogaria Torres Farma</h4>
+        <p>Rua Dr. Beda, 652 - Parque Aurora,<br />Campos dos Goytacazes - RJ, 28026-592</p>
+        <p><strong>Telefone:</strong> (22) 2726-4892<br /><strong>WhatsApp:</strong> (22) 99940-4155<br /><strong>Email:</strong> drogariatorresfarma@gmail.com</p>
+      </div>
+      <div class="footer-coluna">
+        <h4>Institucional</h4>
+        <nav class="footer-nav">
+          <a href="termos.html">Termos de Uso</a>
+          <a href="privacidade.html">Política de Privacidade</a>
+          <a href="contato.html">Contato</a>
+          <a href="sobre.html">Sobre Nós</a>
+        </nav>
+      </div>
+      <div class="footer-coluna">
+        <h4>Siga-nos</h4>
+        <div class="social">
+          <a href="https://www.facebook.com/torresfarma/?locale=pt_BR" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/drogariatorresfarma/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/5522999404155" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="footer-developer-credit" style="margin-top: 2rem">
+          <span>Desenvolvido por: </span>
+          <a href="https://wa.me/5522992052215" target="_blank" rel="noopener noreferrer" class="developer-link">
+            <img src="assets/img/logo-dev.png" alt="Logo Next Level Web GT" class="developer-logo" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2025 Drogaria Torres Farma. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5522999404155?text=Ol%C3%A1%2C%20Drogaria%20Torres%20Farma!%20Venho%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido%20personalizado." class="whatsapp-float-btn" target="_blank" aria-label="Fale conosco pelo WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <a href="#" id="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></a>
+  
+  <script src="produtos.js"></script>
+  <script src="js/carrinho.js"></script>
+  <script src="js/UI.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+.intro {
+  text-align: center;
+  padding: 4rem 5%;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 90, 141, 0.8),
+      rgba(0, 90, 141, 0.5)
+    ),
+    url("../../assets/img/fundo-farmacia.avif");
+  background-position: center;
+  background-size: cover;
+  color: var(--branco);
+}
+
+.intro h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.intro p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 1rem auto 0;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.feedback-carrinho {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--texto-titulo);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.feedback-carrinho.show {
+  opacity: 1;
+}
+
+.whatsapp-float-btn {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-float-btn:hover {
+  background-color: #128c7e;
+  transform: scale(1.1);
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 95px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--texto-titulo);
+  color: var(--branco);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 20px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.3s ease-in-out;
+}
+
+#back-to-top:hover {
+  background-color: var(--azul-principal);
+  transform: translateY(5px) scale(1.05);
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--sombra);
+  border: 1px solid var(--cinza-medio);
+}
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--texto-titulo);
+  font-weight: 800;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--cinza-medio);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--azul-principal);
+  box-shadow: 0 0 0 3px rgba(0, 90, 141, 0.2);
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 3rem;
+  line-height: 1.8;
+}
+.contact-info h3 {
+  color: var(--texto-titulo);
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+.contact-info a {
+  color: var(--laranja-destaque);
+  font-weight: 600;
+  text-decoration: none;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* --- Media Queries --- */
+
+@media (max-width: 768px) {
+  .intro h2 {
+    font-size: 2rem;
+  }
+  .intro p {
+    font-size: 1rem;
+  }
+  .whatsapp-float-btn {
+    bottom: 25px;
+    right: 25px;
+  }
+  #back-to-top {
+    bottom: 95px;
+    right: 25px;
+  }
+}

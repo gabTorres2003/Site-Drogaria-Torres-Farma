@@ -45,14 +45,11 @@ class UI {
   }
 
   renderizarProdutos(listaDeProdutos) {
-    // Limpa todas as secções de produtos
     for (const key in this.secoesProdutos) {
       if (this.secoesProdutos[key]) {
         this.secoesProdutos[key].innerHTML = "";
       }
     }
-
-    // Preenche cada secção com os produtos da categoria correspondente
     listaDeProdutos.forEach((produto) => {
       const secaoDoProduto = this.secoesProdutos[produto.categoria];
       if (secaoDoProduto) {
@@ -65,11 +62,10 @@ class UI {
     const carrosseis = document.querySelectorAll(".product-swiper");
     carrosseis.forEach((carrossel) => {
       const slides = carrossel.querySelectorAll(".swiper-slide");
-      // Habilita o loop apenas se houver slides suficientes para evitar problemas
       const isLoopingEnabled = slides.length > 5;
       if (slides.length > 0) {
         new Swiper(carrossel, {
-          loop: isLoopingEnabled, // Ativa o loop para navegação infinita
+          loop: isLoopingEnabled,
           slidesPerView: "auto",
           spaceBetween: 24,
           navigation: {

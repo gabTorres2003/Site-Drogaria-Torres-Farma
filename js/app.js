@@ -13,14 +13,13 @@ class App {
   }
 
   _configurarBannerSwiper() {
-    // Usar um seletor específico para o banner principal para não afetar os outros
     if (document.querySelector(".main-banner-swiper")) {
       new Swiper(".main-banner-swiper", {
         effect: "slide",
         loop: true,
         speed: 800,
         autoplay: {
-          delay: 4000, // Ajustado para 3 segundos
+          delay: 4000,
           disableOnInteraction: false,
         },
         pagination: {

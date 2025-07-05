@@ -1,9 +1,3 @@
-/* ======================================================= */
-/* ARQUIVO PRINCIPAL DE ESTILOS                          */
-/* Este arquivo apenas importa os outros arquivos (parciais)   */
-/* A ordem da importação é importante.                   */
-/* ======================================================= */
-
 /* 1. Base e Variáveis Globais */
 @import 'base/_variables.css';
 @import 'base/_base.css';

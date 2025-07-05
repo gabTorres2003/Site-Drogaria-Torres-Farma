@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Drogaria Torres Farma - Saúde e Bem-estar em Campos</title>
+    <meta
+      name="description"
+      content="Encontre medicamentos, produtos de higiene e bem-estar na Drogaria Torres Farma em Campos dos Goytacazes. Cuidando da sua saúde com os melhores preços."
+    />
+    <meta
+      name="keywords"
+      content="drogaria, farmácia, medicamentos, campos dos goytacazes, torres farma, saúde, bem-estar"
+    />
+    <meta name="author" content="Drogaria Torres Farma" />
+    <link rel="canonical" href="https://drogariatorresfarma.netlify.app/" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://drogariatorresfarma.netlify.app/"
+    />
+    <meta
+      property="og:title"
+      content="Drogaria Torres Farma - Saúde e Bem-estar em Campos"
+    />
+    <meta
+      property="og:description"
+      content="Encontre medicamentos, produtos de higiene e bem-estar na Drogaria Torres Farma em Campos dos Goytacazes."
+    />
+    <meta
+      property="og:image"
+      content="https://drogariatorresfarma.netlify.app/assets/img/loja3.jpg"
+    />
+    <meta property="og:site_name" content="Drogaria Torres Farma" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://drogariatorresfarma.netlify.app/"
+    />
+    <meta
+      property="twitter:title"
+      content="Drogaria Torres Farma - Saúde e Bem-estar em Campos"
+    />
+    <meta
+      property="twitter:description"
+      content="Encontre medicamentos, produtos de higiene e bem-estar na Drogaria Torres Farma em Campos dos Goytacazes."
+    />
+    <meta
+      property="twitter:image"
+      content="https://drogariatorresfarma.netlify.app/assets/img/loja3.jpg"
+    />
+
+    <link rel="icon" href="assets/img/torresb.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="assets/img/logo-torres.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Pharmacy",
+        "name": "Drogaria Torres Farma",
+        "description": "Cuidando da sua saúde com qualidade, carinho e os melhores preços da região.",
+        "url": "https://drogariatorresfarma.netlify.app/",
+        "logo": "https://drogariatorresfarma.netlify.app/assets/img/logo-torres.png",
+        "image": "https://drogariatorresfarma.netlify.app/assets/img/loja3.jpg",
+        "telephone": "+5522999404155",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Dr. Beda, 652",
+          "addressLocality": "Campos dos Goytacazes",
+          "addressRegion": "RJ",
+          "postalCode": "28026-592",
+          "addressCountry": "BR"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "07:30",
+            "closes": "22:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "08:00",
+            "closes": "14:00"
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-principal">
+        <div class="container">
+          <div class="logo-titulo">
+            <a
+              href="index.html"
+              style="
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+              "
+            >
+              <img
+                src="assets/img/logo-torres.png"
+                alt="Logo Drogaria Torres Farma"
+                class="logo"
+              />
+              <h1>Drogaria Torres Farma</h1>
+            </a>
+          </div>
+          <div class="search-container">
+            <input
+              type="search"
+              placeholder="O que você procura?"
+              class="search-input"
+            />
+            <div class="search-suggestions"></div>
+            <button class="search-button"><i class="fas fa-search"></i></button>
+          </div>
+          <div class="header-direita">
+            <button class="search-toggle-btn" aria-label="Abrir busca">
+              <i class="fas fa-search"></i>
+              <i class="fas fa-times"></i>
+            </button>
+            <div class="carrinho-container">
+              <button class="carrinho-btn" aria-label="Carrinho de compras">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="carrinho-quantidade">0</span>
+              </button>
+              <div class="carrinho-dropdown">
+                <div class="carrinho-header">
+                  <h4>Meu Carrinho</h4>
+                  <button
+                    class="btn-fechar-carrinho"
+                    aria-label="Fechar carrinho"
+                  >
+                    &times;
+                  </button>
+                </div>
+                <div class="carrinho-items">
+                  <p class="carrinho-vazio">Seu carrinho está vazio</p>
+                </div>
+                <div class="carrinho-total">
+                  <p>Total: <span>R$ 0,00</span></p>
+                  <div class="carrinho-botoes-container">
+                    <button class="btn-esvaziar-carrinho">Esvaziar</button>
+                    <button class="btn-finalizar">Finalizar Compra</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menu">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="header-nav">
+        <div class="container">
+          <nav class="menu">
+            <div class="dropdown">
+              <button class="dropdown-btn">
+                Departamentos <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#produtos">Produtos em Promoção</a>
+                <a href="#mais-vendidos">Mais Vendidos</a>
+                <a href="#novidades">Novidades</a>
+                <a href="#genericos">Genéricos</a>
+                <a href="#vitaminas-suplementos">Vitaminas e Suplementos</a>
+                <a href="#mamae-bebe">Cuidados para Mamãe e Bebê</a>
+                <a href="#higiene-pessoal">Higiene Pessoal</a>
+                <a href="#saude-feminina">Saúde Feminina</a>
+                <a href="#primeiros-socorros">Primeiros Socorros</a>
+              </div>
+            </div>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="sobre.html">Loja</a>
+            <a href="contato.html">Contato</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="intro">
+      <h2>Bem-vindo à Drogaria Torres Farma</h2>
+      <p>
+        Cuidando da sua saúde com qualidade, carinho e os melhores preços da
+        região. Confira nossas promoções imperdíveis e conte com nosso
+        atendimento especializado!
+      </p>
+    </section>
+
+    <main>
+      <section class="banner-container">
+        <div class="swiper main-banner-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="assets/img/banner1.png"
+                alt="Banner Promocional 1"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="assets/img/banner2.png"
+                alt="Banner Promocional 2"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="assets/img/banner3.png"
+                alt="Banner Promocional 3"
+                onerror="this.style.display='none'"
+              />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <section
+        id="busca-resultados"
+        class="busca-container"
+        style="display: none"
+      >
+        <h2>Resultados da Busca</h2>
+        <div class="busca-grid"></div>
+      </section>
+
+      <section id="produtos" class="produtos-container">
+        <h2>Produtos em Promoção</h2>
+        <div class="swiper product-swiper">
+          <div class="swiper-wrapper produtos-grid"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <section id="mais-vendidos" class="produtos-container">
+        <h2>Mais Vendidos</h2>
+        <div class="swiper product-swiper">
+          <div class="swiper-wrapper produtos-grid"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <section id="novidades" class="produtos-container">
+        <h2>Novidades</h2>
+        <div class="swiper product-swiper">
+          <div class="swiper-wrapper produtos-grid"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <section id="genericos" class="produtos-container">
+        <h2>Genéricos</h2>
+        <div class="swiper product-swiper">
+          <div class="swiper-wrapper produtos-grid"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <section id="vitaminas-suplementos" class="produtos-container">
+        <h2>Vitaminas e Suplementos</h2>
+        <div class="swiper product-swiper">
+          <div class="swiper-wrapper produtos-grid"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <section id="mamae-bebe" class="produtos-container">
+        <h2>Cuidados para Mamãe e Bebê</h2>
+        <div class="swiper product-swiper">
+          <div class="swiper-wrapper produtos-grid"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <section id="higiene-pessoal" class="produtos-container">
+        <h2>Higiene Pessoal</h2>
+        <div class="swiper product-swiper">
+          <div class="swiper-wrapper produtos-grid"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <section id="saude-feminina" class="produtos-container">
+        <h2>Saúde Feminina</h2>
+        <div class="swiper product-swiper">
+          <div class="swiper-wrapper produtos-grid"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <section id="primeiros-socorros" class="produtos-container">
+        <h2>Primeiros Socorros</h2>
+        <div class="swiper product-swiper">
+          <div class="swiper-wrapper produtos-grid"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div class="footer-coluna">
+          <h4>Drogaria Torres Farma</h4>
+          <p>
+            Rua Dr. Beda, 652 - Parque Aurora,<br />Campos dos Goytacazes - RJ,
+            28026-592
+          </p>
+          <p>
+            <strong>Telefone:</strong> (22) 2726-4892<br /><strong
+              >WhatsApp:</strong
+            >
+            (22) 99940-4155<br /><strong>Email:</strong>
+            drogariatorresfarma@gmail.com
+          </p>
+        </div>
+        <div class="footer-coluna">
+          <h4>Institucional</h4>
+          <nav class="footer-nav">
+            <a href="termos.html">Termos de Uso</a>
+            <a href="privacidade.html">Política de Privacidade</a>
+            <a href="contato.html">Contato</a>
+            <a href="sobre.html">Sobre Nós</a>
+          </nav>
+        </div>
+        <div class="footer-coluna">
+          <h4>Siga-nos</h4>
+          <div class="social">
+            <a
+              href="https://www.facebook.com/torresfarma/?locale=pt_BR"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/drogariatorresfarma/"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://wa.me/5522999404155"
+              aria-label="WhatsApp"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+          <div class="footer-developer-credit" style="margin-top: 2rem">
+            <span>Desenvolvido por: </span>
+            <a
+              href="https://wa.me/5522992052215"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="developer-link"
+            >
+              <img
+                src="assets/img/logo-dev.png"
+                alt="Logo Next Level Web GT"
+                class="developer-logo"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2025 Drogaria Torres Farma. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/5522999404155?text=Ol%C3%A1%2C%20Drogaria%20Torres%20Farma!%20Venho%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido%20personalizado."
+      class="whatsapp-float-btn"
+      target="_blank"
+      aria-label="Fale conosco pelo WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a
+      href="#"
+      id="back-to-top"
+      aria-label="Voltar ao topo"
+      title="Voltar ao topo"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="produtos.js"></script>
+    <script src="js/carrinho.js"></script>
+    <script src="js/UI.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <div id="info-modal" class="modal-overlay">
+      <div class="modal-content">
+        <button class="close-modal" aria-label="Fechar">&times;</button>
+        <h2>Complete seu Pedido</h2>
+        <p>Por favor, preencha seus dados para a entrega.</p>
+        <form id="info-form">
+          <div class="form-group">
+            <label for="cliente-nome">Nome Completo*</label>
+            <input type="text" id="cliente-nome" required />
+          </div>
+          <div class="form-group">
+            <label for="cliente-celular">Celular (WhatsApp)*</label>
+            <input
+              type="tel"
+              id="cliente-celular"
+              placeholder="(22) 99999-9999"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="cliente-rua">Rua*</label>
+            <input type="text" id="cliente-rua" required />
+          </div>
+          <div class="form-group">
+            <label for="cliente-numero">Número*</label>
+            <input type="text" id="cliente-numero" required />
+          </div>
+          <div class="form-group">
+            <label for="cliente-bairro">Bairro*</label>
+            <input type="text" id="cliente-bairro" required />
+          </div>
+          <div class="form-group-checkbox">
+            <input type="checkbox" id="tem-complemento" />
+            <label for="tem-complemento">(Apartamento/Lote/Bloco)</label>
+          </div>
+          <div
+            id="complemento-wrapper"
+            class="form-group"
+            style="display: none"
+          >
+            <label for="cliente-complemento"
+              >Complemento (Ex: Apt 101, Bloco B)</label
+            >
+            <input type="text" id="cliente-complemento" />
+          </div>
+          <div class="form-group">
+            <label for="cliente-referencia">Ponto de Referência</label>
+            <input type="text" id="cliente-referencia" />
+          </div>
+          <div class="form-group">
+            <label for="cliente-pagamento">Forma de Pagamento*</label>
+            <select id="cliente-pagamento" required>
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="Dinheiro">Dinheiro</option>
+              <option value="Cartão de Crédito">Cartão de Crédito</option>
+              <option value="Cartão de Débito">Cartão de Débito</option>
+              <option value="Pix">Pix</option>
+            </select>
+          </div>
+          <div class="form-group-checkbox">
+            <input type="checkbox" id="precisa-troco" />
+            <label for="precisa-troco">Precisa de troco?</label>
+          </div>
+          <div id="troco-wrapper" class="form-group" style="display: none">
+            <label for="cliente-troco">Troco para quanto?</label>
+            <input type="number" id="cliente-troco" placeholder="Ex: 50" />
+          </div>
+          <button type="submit" class="btn-enviar-pedido">
+            Enviar Pedido via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

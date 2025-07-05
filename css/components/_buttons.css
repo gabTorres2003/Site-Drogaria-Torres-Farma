@@ -1,0 +1,76 @@
+.search-button {
+  padding: 0 1.2rem;
+  border: none;
+  background-color: var(--laranja-destaque);
+  color: white;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: var(--laranja-hover);
+}
+
+.btn-finalizar,
+.btn-comprar {
+  background-color: var(--laranja-destaque);
+  color: white;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.btn-finalizar:hover,
+.btn-comprar:hover {
+  background-color: var(--azul-escuro);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-esvaziar-carrinho {
+  padding: 0.9rem 1rem;
+  background-color: var(--cinza-claro);
+  color: var(--texto-corpo);
+  border: 1px solid var(--cinza-medio);
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.btn-esvaziar-carrinho:hover {
+  background-color: var(--cinza-medio);
+  border-color: #b0b0b0;
+  color: var(--texto-titulo);
+}
+
+.btn-enviar {
+  display: block;
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  background-color: var(--azul-principal);
+  color: var(--branco);
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-enviar:hover {
+  background-color: var(--laranja-hover);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

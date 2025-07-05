@@ -1,0 +1,59 @@
+/* Conteúdo final para _carrossel.css */
+section.produtos-container {
+  width: 100%;
+  max-width: var(--max-width, 1200px);
+  margin: 2rem auto 3rem;
+  padding: 2rem 0; 
+  position: relative;
+  border-bottom: 1px solid #e0e0e0;
+  scroll-margin-top: 120px;
+}
+section.produtos-container:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.produtos-container h2 {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--texto-titulo, #333);
+  font-weight: 700;
+  padding: 0 30px;
+}
+.product-swiper {
+  width: 100%;
+  height: auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+.product-swiper .swiper-wrapper {
+  padding-bottom: 1rem; 
+}
+.product-swiper .swiper-button-next,
+.product-swiper .swiper-button-prev {
+  position: absolute;
+  top: 45%; 
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: var(--branco, #fff);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: var(--azul-principal, #007bff);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+.product-swiper .swiper-button-prev { left: 0px; }
+.product-swiper .swiper-button-next { right: 0px; }
+.product-swiper .swiper-button-next:after,
+.product-swiper .swiper-button-prev:after {
+  font-size: 1rem;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .product-swiper { padding: 0 16px; }
+  section.produtos-container { scroll-margin-top: 80px; }
+  .produtos-container h2 { font-size: 1.4rem; padding: 0 16px; }
+  .product-swiper .swiper-button-next,
+  .product-swiper .swiper-button-prev { display: none; }
+}

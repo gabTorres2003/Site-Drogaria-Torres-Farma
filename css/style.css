@@ -1,0 +1,24 @@
+/* ======================================================= */
+/* ARQUIVO PRINCIPAL DE ESTILOS                          */
+/* Este arquivo apenas importa os outros arquivos (parciais)   */
+/* A ordem da importação é importante.                   */
+/* ======================================================= */
+
+/* 1. Base e Variáveis Globais */
+@import 'base/_variables.css';
+@import 'base/_base.css';
+
+/* 2. Componentes Reutilizáveis */
+@import 'components/_buttons.css';
+@import 'components/_header.css';
+@import 'components/_carrinho.css';
+@import "components/_busca.css";
+@import 'components/_produto-card.css';
+@import 'components/_carrossel.css';
+@import 'components/_footer.css';
+@import 'components/_outros.css';
+@import "components/_modal.css";
+@import "components/_banner-swiper.css";
+
+/* 3. Estilos Específicos de Páginas */
+@import 'pages/_sobre.css';

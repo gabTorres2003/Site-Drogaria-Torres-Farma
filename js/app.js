@@ -114,14 +114,14 @@ class App {
       if (btnEsvaziar) {
         btnEsvaziar.addEventListener("click", (event) => {
           event.stopPropagation();
-          if (
-            this.carrinho.itens.length > 0 &&
-            confirm(
-              "Tem certeza que deseja remover todos os itens do carrinho?"
-            )
-          ) {
-            this.carrinho.esvaziar();
-            this.ui.renderizarCarrinho(this.carrinho);
+          if (this.carrinho.itens.length > 0) {
+            this.ui.showConfirmationModal(
+              "Tem certeza que deseja remover todos os itens do carrinho?",
+              () => {
+                this.carrinho.esvaziar();
+                this.ui.renderizarCarrinho(this.carrinho);
+              }
+            );
           }
         });
       }

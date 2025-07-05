@@ -309,4 +309,27 @@ class UI {
       });
     }, 150);
   }
+  showConfirmationModal(message, onConfirm) {
+    const modal = document.getElementById("custom-confirm-modal");
+    const messageP = document.getElementById("confirm-message");
+    const okBtn = document.getElementById("confirm-ok-btn");
+    const cancelBtn = document.getElementById("confirm-cancel-btn");
+
+    messageP.textContent = message;
+    modal.classList.add("active");
+
+    const handleConfirm = () => {
+      onConfirm();
+      closeModal();
+    };
+
+    const closeModal = () => {
+      modal.classList.remove("active");
+      okBtn.removeEventListener("click", handleConfirm);
+      cancelBtn.removeEventListener("click", closeModal);
+    };
+
+    okBtn.addEventListener("click", handleConfirm, { once: true });
+    cancelBtn.addEventListener("click", closeModal, { once: true });
+  }
 }

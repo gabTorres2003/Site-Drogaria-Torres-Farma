@@ -93,6 +93,56 @@
   background-color: #128C7E;
 }
 
+.modal-content.confirm-modal {
+  max-width: 400px;
+  text-align: center;
+}
+
+.confirm-modal h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--texto-titulo, #333);
+}
+
+.confirm-modal p {
+  margin-bottom: 2rem;
+  color: var(--texto-corpo, #555);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.confirm-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.confirm-buttons .btn {
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius, 8px);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.confirm-buttons .btn-secondary {
+  background-color: var(--cinza-medio, #e0e0e0);
+  color: var(--texto-titulo, #333);
+}
+.confirm-buttons .btn-secondary:hover {
+  background-color: #d1d1d1;
+}
+
+.confirm-buttons .btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+.confirm-buttons .btn-danger:hover {
+    background-color: #c82333;
+}
+
 @keyframes slideIn {
   from {
     transform: translateY(-30px);

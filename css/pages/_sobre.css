@@ -4,8 +4,6 @@
   text-align: justify;
   font-size: 1.1rem;
 }
-
-/* Estilos para a seção da Equipe */
 .equipe {
   background-color: var(--branco);
 }
@@ -37,7 +35,7 @@
   height: 180px;
   object-fit: cover;
   object-position: center;
-  border-radius: 50%; /* Deixa as imagens redondas */
+  border-radius: 50%;
   margin: 0 auto 1.5rem auto;
   border: 4px solid var(--cinza-claro);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -64,15 +62,13 @@
   line-height: 1.5;
 }
 
-
-/* Estilos para a seção de Fotos */
 .fotos {
     background-color: var(--fundo-site);
 }
 
 .fotos .card {
-  padding: 0; /* Remove padding para a imagem preencher */
-  overflow: hidden; /* Garante que a imagem não vaze */
+  padding: 0; 
+  overflow: hidden;
   border-radius: var(--border-radius);
   box-shadow: var(--sombra);
   border: 1px solid var(--cinza-medio);

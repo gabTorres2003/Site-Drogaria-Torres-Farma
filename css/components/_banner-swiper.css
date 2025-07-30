@@ -5,7 +5,7 @@
 
 .main-banner-swiper {
   width: 100%;
-  max-width: 1528px;
+  max-width: var(--max-width);
   aspect-ratio: 16 / 6;
   max-height: 300px;
   border-radius: 10px;

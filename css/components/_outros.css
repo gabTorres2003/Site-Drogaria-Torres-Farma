@@ -210,6 +210,45 @@
 #cookie-banner .btn:hover {
   background-color: var(--laranja-hover);
 }
+.secao-pedido-personalizado {
+  background-color: var(--azul-principal);
+  color: var(--branco);
+  padding: 4rem 20px;
+  text-align: center;
+}
+
+.secao-pedido-personalizado h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--branco);
+}
+
+.secao-pedido-personalizado h2::after {
+  display: none;
+}
+
+.secao-pedido-personalizado p {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.secao-pedido-personalizado .btn-enviar {
+  background-color: var(--laranja-destaque);
+  box-shadow: none;
+  text-decoration: none;
+  width: auto;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 1rem 2.5rem;
+}
+.secao-pedido-personalizado .btn-enviar:hover {
+  background-color: var(--laranja-hover);
+  transform: translateY(-2px);
+}
 
 /* --- Media Queries --- */
 

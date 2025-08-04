@@ -11,6 +11,7 @@ class App {
     this._configurarEventListeners();
     this._configurarBannerSwiper();
     this._configurarAvisoCookies();
+    this._configurarPedidoPersonalizado();
   }
 
   _configurarBannerSwiper() {
@@ -432,6 +433,63 @@ class App {
         banner.style.display = "none";
       }, 500);
     });
+  }
+
+  _configurarPedidoPersonalizado() {
+    const botao = document.getElementById("btn-abrir-modal-personalizado");
+    const modal = document.getElementById("modal-pedido-personalizado");
+
+    if (!botao || !modal) return;
+
+    botao.addEventListener("click", (evento) => {
+      evento.preventDefault();
+      this.ui.abrirModalPedidoPersonalizado();
+    });
+
+    const form = document.getElementById("form-pedido-personalizado");
+    const btnFechar = modal.querySelector(".close-modal");
+
+    form.addEventListener("submit", (evento) => {
+      evento.preventDefault();
+      this._enviarPedidoPersonalizado();
+    });
+
+    btnFechar.addEventListener("click", () =>
+      this.ui.fecharModalPedidoPersonalizado()
+    );
+    modal.addEventListener("click", (evento) => {
+      if (evento.target === modal) {
+        this.ui.fecharModalPedidoPersonalizado();
+      }
+    });
+  }
+
+  _enviarPedidoPersonalizado() {
+    const nome = document.getElementById("personalizado-nome").value;
+    const celular = document.getElementById("personalizado-celular").value;
+    const bairro = document.getElementById("personalizado-bairro").value;
+    const produtosDesejados =
+      document.getElementById("produtos-desejados").value;
+
+    let mensagem =
+      `*SOLICITAÇÃO DE PEDIDO PERSONALIZADO*\n\n` +
+      `*Cliente:* ${nome}\n` +
+      `*Celular:* ${celular}\n`;
+
+    if (bairro) {
+      mensagem += `*Bairro:* ${bairro}\n\n`;
+    }
+
+    mensagem += `*Produtos que procuro:*\n${produtosDesejados}`;
+
+    const numeroFarmacia = "5522999404155";
+    window.open(
+      `https://wa.me/${numeroFarmacia}?text=${encodeURIComponent(mensagem)}`,
+      "_blank"
+    );
+
+    this.ui.fecharModalPedidoPersonalizado();
+    this.ui.mostrarFeedback("Sua solicitação foi enviada!");
   }
 }
 

@@ -332,4 +332,18 @@ class UI {
     okBtn.addEventListener("click", handleConfirm, { once: true });
     cancelBtn.addEventListener("click", closeModal, { once: true });
   }
+  
+  abrirModalPedidoPersonalizado() {
+    const modal = document.getElementById("modal-pedido-personalizado");
+    if (modal) modal.classList.add("active");
+  }
+
+  fecharModalPedidoPersonalizado() {
+    const modal = document.getElementById("modal-pedido-personalizado");
+    if (modal) {
+      modal.classList.remove("active");
+      const form = document.getElementById("form-pedido-personalizado");
+      if (form) form.reset();
+    }
+  }
 }

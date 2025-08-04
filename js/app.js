@@ -10,6 +10,7 @@ class App {
     this.ui.inicializarTodosOsCarrosseis();
     this._configurarEventListeners();
     this._configurarBannerSwiper();
+    this._configurarAvisoCookies();
   }
 
   _configurarBannerSwiper() {
@@ -179,7 +180,7 @@ class App {
       });
 
       this.ui.infoForm.addEventListener("submit", (event) =>
-        this._enviarPedido(event)
+        this._handleFormSubmit(event)
       );
     }
 
@@ -189,9 +190,17 @@ class App {
     this._configurarFormularioContato();
   }
 
-  _enviarPedido(event) {
+  _handleFormSubmit(event) {
     event.preventDefault();
+    this.ui.showConfirmationModal(
+      "Deseja confirmar o envio do pedido? Você será redirecionado ao WhatsApp para finalizar.",
+      () => {
+        this._enviarPedido();
+      }
+    );
+  }
 
+  _enviarPedido() {
     const nome = document.getElementById("cliente-nome").value;
     const celular = document.getElementById("cliente-celular").value;
     const rua = document.getElementById("cliente-rua").value;
@@ -397,6 +406,32 @@ class App {
         formContato.reset();
       });
     }
+  }
+  _configurarAvisoCookies() {
+    const banner = document.getElementById("cookie-banner");
+    const btnAceitar = document.getElementById("aceitar-cookies");
+
+    if (!banner || !btnAceitar) {
+      return;
+    }
+
+    const cookiesAceitos = localStorage.getItem("cookiesAceitosTorresFarma");
+
+    if (!cookiesAceitos) {
+      setTimeout(() => {
+        banner.style.display = "flex";
+        setTimeout(() => banner.classList.add("visible"), 50);
+      }, 500);
+    }
+
+    btnAceitar.addEventListener("click", () => {
+      localStorage.setItem("cookiesAceitosTorresFarma", "true");
+      banner.classList.remove("visible");
+
+      setTimeout(() => {
+        banner.style.display = "none";
+      }, 500);
+    });
   }
 }
 

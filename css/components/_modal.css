@@ -136,11 +136,11 @@
 }
 
 .confirm-buttons .btn-danger {
-  background-color: #dc3545;
+  background-color: #d40d0d;
   color: white;
 }
 .confirm-buttons .btn-danger:hover {
-    background-color: #c82333;
+    background-color: #05ac37;
 }
 
 @keyframes slideIn {

@@ -40,7 +40,7 @@
   text-align: center;
 }
 .produto-info h3 {
-  color: var(--texto-titulo);
+  color: var(--azul-principal);
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
   font-weight: 700;
@@ -58,16 +58,17 @@
 
 .produto-preco-original {
   font-size: 0.9rem;
-  color: #6c757d;
+  color: #ff0000;
   text-decoration: line-through;
   display: block;
   height: 1.2em;
 }
 .produto-preco {
-  color: var(--laranja-destaque);
+  color: var(--azul-principal);
   font-weight: 800;
   font-size: 1.5rem;
   margin-top: 0%;
+  margin-bottom: 1.0rem;
 }
 
 .desconto-tag {
@@ -117,7 +118,8 @@
   }
 
   .produto-preco {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.3rem;
   }
 
   .produto-descricao {

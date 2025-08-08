@@ -418,12 +418,14 @@ class App {
 
     const cookiesAceitos = localStorage.getItem("cookiesAceitosTorresFarma");
 
-    if (!cookiesAceitos) {
-      setTimeout(() => {
-        banner.style.display = "flex";
-        setTimeout(() => banner.classList.add("visible"), 50);
-      }, 500);
+    if (cookiesAceitos) {
+      banner.style.display = "none";
+      return;
     }
+    setTimeout(() => {
+      banner.style.display = "flex";
+      setTimeout(() => banner.classList.add("visible"), 50);
+    }, 500);
 
     btnAceitar.addEventListener("click", () => {
       localStorage.setItem("cookiesAceitosTorresFarma", "true");
@@ -436,7 +438,7 @@ class App {
   }
 
   _configurarPedidoPersonalizado() {
-    const botao = document.getElementById("btn-abrir-modal-personalizado");
+    const botao = document.getElementById("botao-pedido-personalizado");
     const modal = document.getElementById("modal-pedido-personalizado");
 
     if (!botao || !modal) return;
@@ -462,6 +464,34 @@ class App {
         this.ui.fecharModalPedidoPersonalizado();
       }
     });
+  }
+
+  _enviarPedidoPersonalizado() {
+    const nome = document.getElementById("personalizado-nome").value;
+    const celular = document.getElementById("personalizado-celular").value;
+    const bairro = document.getElementById("personalizado-bairro").value;
+    const produtosDesejados =
+      document.getElementById("produtos-desejados").value;
+
+    let mensagem =
+      `*SOLICITAÇÃO DE PEDIDO PERSONALIZADO*\n\n` +
+      `*Cliente:* ${nome}\n` +
+      `*Celular:* ${celular}\n`;
+
+    if (bairro) {
+      mensagem += `*Bairro:* ${bairro}\n\n`;
+    }
+
+    mensagem += `*Produtos que procuro:*\n${produtosDesejados}`;
+
+    const numeroFarmacia = "5522999404155";
+    window.open(
+      `https://wa.me/${numeroFarmacia}?text=${encodeURIComponent(mensagem)}`,
+      "_blank"
+    );
+
+    this.ui.fecharModalPedidoPersonalizado();
+    this.ui.mostrarFeedback("Sua solicitação foi enviada!");
   }
 
   _enviarPedidoPersonalizado() {

@@ -215,6 +215,8 @@
   color: var(--branco);
   padding: 4rem 20px;
   text-align: center;
+  position: relative; 
+  z-index: 1;
 }
 
 .secao-pedido-personalizado h2 {

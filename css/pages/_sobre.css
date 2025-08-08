@@ -94,3 +94,23 @@
   color: var(--texto-titulo);
   text-align: center;
 }
+
+.mapa-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--sombra);
+}
+
+.mapa-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}

@@ -239,6 +239,8 @@
 @media (max-width: 768px) {
   .header-direita .carrinho-container {
     order: 1;
+    padding: 0;
+    margin-left: 0;
   }
   .carrinho-dropdown {
     position: fixed;

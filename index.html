@@ -535,6 +535,100 @@
       <button id="aceitar-cookies" class="btn">Entendi e Aceito</button>
     </div>
 
+    <div id="modal-pedido-personalizado" class="modal-overlay">
+      <div class="modal-content">
+        <button class="close-modal" aria-label="Fechar">&times;</button>
+        <h2>Pedido Personalizado</h2>
+        <p>
+          Não encontrou o que procurava? Preencha os campos abaixo que
+          entraremos em contato.
+        </p>
+        <form id="form-pedido-personalizado">
+          <div class="form-group">
+            <label for="personalizado-nome">Seu Nome*</label>
+            <input type="text" id="personalizado-nome" required />
+          </div>
+          <div class="form-group">
+            <label for="personalizado-celular">Seu Celular (WhatsApp)*</label>
+            <input
+              type="tel"
+              id="personalizado-celular"
+              placeholder="(22) 99999-9999"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="personalizado-rua">Rua*</label>
+            <input type="text" id="personalizado-rua" required />
+          </div>
+          <div class="form-group">
+            <label for="personalizado-numero">Número*</label>
+            <input type="text" id="personalizado-numero" required />
+          </div>
+          <div class="form-group">
+            <label for="personalizado-bairro">Bairro*</label>
+            <input type="text" id="personalizado-bairro" required />
+          </div>
+
+          <div class="form-group-checkbox">
+            <input type="checkbox" id="personalizado-tem-complemento" />
+            <label for="personalizado-tem-complemento"
+              >(Apartamento/Lote/Bloco)</label
+            >
+          </div>
+
+          <div
+            id="personalizado-complemento-wrapper"
+            class="form-group"
+            style="display: none"
+          >
+            <label for="personalizado-complemento"
+              >Complemento (Ex: Apt 101, Bloco B)</label
+            >
+            <input type="text" id="personalizado-complemento" />
+          </div>
+
+          <div class="form-group">
+            <label for="personalizado-referencia">Ponto de Referência</label>
+            <input type="text" id="personalizado-referencia" />
+          </div>
+
+          <div class="form-group">
+            <label for="produtos-desejados"
+              >Quais produtos você procura?*</label
+            >
+            <textarea
+              id="produtos-desejados"
+              rows="4"
+              placeholder="Ex: Tinta para cabelo Cor & Ton 7.0, Fralda Pampers M, etc."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group-checkbox">
+            <input type="checkbox" id="consultar-preco" />
+            <label for="consultar-preco">Quero apenas consultar o preço</label>
+          </div>
+
+          <div class="form-group" id="grupo-forma-pagamento">
+            <label for="forma-pagamento">Forma de Pagamento Preferencial</label>
+            <select id="forma-pagamento">
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="Dinheiro">Dinheiro</option>
+              <option value="Cartão de Crédito">Cartão de Crédito</option>
+              <option value="Cartão de Débito">Cartão de Débito</option>
+              <option value="Pix">Pix</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-enviar-pedido">
+            Enviar Solicitação via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+
     <script src="produtos.js"></script>
     <script src="js/carrinho.js"></script>
     <script src="js/UI.js"></script>

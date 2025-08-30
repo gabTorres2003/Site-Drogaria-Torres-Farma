@@ -450,6 +450,32 @@ class App {
 
     const form = document.getElementById("form-pedido-personalizado");
     const btnFechar = modal.querySelector(".close-modal");
+    const chkTemComplemento = document.getElementById(
+      "personalizado-tem-complemento"
+    );
+    const complementoWrapper = document.getElementById(
+      "personalizado-complemento-wrapper"
+    );
+    const chkConsultarPreco = document.getElementById("consultar-preco");
+    const grupoPagamento = document.getElementById("grupo-forma-pagamento");
+
+    // Lógica para mostrar/esconder o campo de complemento
+    if (chkTemComplemento && complementoWrapper) {
+      chkTemComplemento.addEventListener("change", () => {
+        complementoWrapper.style.display = chkTemComplemento.checked
+          ? "block"
+          : "none";
+      });
+    }
+
+    // Lógica para mostrar/esconder a forma de pagamento
+    if (chkConsultarPreco && grupoPagamento) {
+      chkConsultarPreco.addEventListener("change", () => {
+        grupoPagamento.style.display = chkConsultarPreco.checked
+          ? "none"
+          : "block";
+      });
+    }
 
     form.addEventListener("submit", (evento) => {
       evento.preventDefault();
@@ -467,50 +493,49 @@ class App {
   }
 
   _enviarPedidoPersonalizado() {
+    // Coleta dos dados do formulário
     const nome = document.getElementById("personalizado-nome").value;
     const celular = document.getElementById("personalizado-celular").value;
+    const rua = document.getElementById("personalizado-rua").value;
+    const numero = document.getElementById("personalizado-numero").value;
     const bairro = document.getElementById("personalizado-bairro").value;
+    const temComplemento = document.getElementById(
+      "personalizado-tem-complemento"
+    ).checked;
+    const complemento = document.getElementById(
+      "personalizado-complemento"
+    ).value;
+    const referencia = document.getElementById(
+      "personalizado-referencia"
+    ).value;
     const produtosDesejados =
       document.getElementById("produtos-desejados").value;
+    const consultarPreco = document.getElementById("consultar-preco").checked;
+    const pagamento = document.getElementById("forma-pagamento").value;
 
-    let mensagem =
-      `*SOLICITAÇÃO DE PEDIDO PERSONALIZADO*\n\n` +
-      `*Cliente:* ${nome}\n` +
-      `*Celular:* ${celular}\n`;
+    // Montagem da mensagem
+    let mensagem = `*SOLICITAÇÃO DE PEDIDO PERSONALIZADO*\n\n`;
+    mensagem += `*CLIENTE:* ${nome}\n`;
+    mensagem += `*CELULAR:* ${celular}\n\n`;
 
-    if (bairro) {
-      mensagem += `*Bairro:* ${bairro}\n\n`;
+    mensagem += `*ENDEREÇO DE ENTREGA:*\n`;
+    mensagem += `Rua: ${rua}, Nº ${numero}\n`;
+    mensagem += `Bairro: ${bairro}\n`;
+
+    if (temComplemento && complemento) {
+      mensagem += `Complemento: ${complemento}\n`;
+    }
+    if (referencia) {
+      mensagem += `Ponto de Referência: ${referencia}\n`;
     }
 
-    mensagem += `*Produtos que procuro:*\n${produtosDesejados}`;
+    mensagem += `\n*PRODUTOS DESEJADOS:*\n${produtosDesejados}\n\n`;
 
-    const numeroFarmacia = "5522999404155";
-    window.open(
-      `https://wa.me/${numeroFarmacia}?text=${encodeURIComponent(mensagem)}`,
-      "_blank"
-    );
-
-    this.ui.fecharModalPedidoPersonalizado();
-    this.ui.mostrarFeedback("Sua solicitação foi enviada!");
-  }
-
-  _enviarPedidoPersonalizado() {
-    const nome = document.getElementById("personalizado-nome").value;
-    const celular = document.getElementById("personalizado-celular").value;
-    const bairro = document.getElementById("personalizado-bairro").value;
-    const produtosDesejados =
-      document.getElementById("produtos-desejados").value;
-
-    let mensagem =
-      `*SOLICITAÇÃO DE PEDIDO PERSONALIZADO*\n\n` +
-      `*Cliente:* ${nome}\n` +
-      `*Celular:* ${celular}\n`;
-
-    if (bairro) {
-      mensagem += `*Bairro:* ${bairro}\n\n`;
+    if (consultarPreco) {
+      mensagem += `*OBJETIVO:* Apenas consultar o preço e a disponibilidade.`;
+    } else {
+      mensagem += `*FORMA DE PAGAMENTO:* ${pagamento || "Não especificada"}`;
     }
-
-    mensagem += `*Produtos que procuro:*\n${produtosDesejados}`;
 
     const numeroFarmacia = "5522999404155";
     window.open(

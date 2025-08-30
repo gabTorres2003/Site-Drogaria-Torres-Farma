@@ -33,8 +33,7 @@ Se você tiver alguma sugestão ou quiser avaliar este projeto, será de grande 
 
 ## Atualizações
 
-- (21/06/2025) Criado o arquivo conversor.py para ler um arquivo csv e convertê-lo em .js para facilitar a inclusão de produtos a partir de planilhas.
-- (Próxima atualização...) Carrosséis de eventos e datas comemorativas. 
+- Ajuste na seção da Loja e Equipe (30/08/2025(
 
 
 

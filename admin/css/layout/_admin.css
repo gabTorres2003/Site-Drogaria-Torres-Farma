@@ -1,0 +1,31 @@
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: var(--color-main-bg);
+    display: flex;
+    flex-direction: column;
+}
+
+.page-content {
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+    color: var(--color-text-dark);
+}
+
+.page-header p {
+    margin: 0;
+    color: var(--color-text-muted);
+}

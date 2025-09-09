@@ -1,18 +1,16 @@
 :root {
-    --color-primary: #007bff;
-    --color-primary-hover: #0056b3;
-    --color-success: #28a745;
-    --color-success-hover: #218838;
-    --color-danger: #dc3545;
-    --color-danger-hover: #c82333;
-
-    --color-dark: #343a40;
-    --color-text: #333;
-    --color-background: #f4f7f6;
+    --color-sidebar-bg: #2c3e50;
+    --color-main-bg: #f4f7f6;
     --color-white: #ffffff;
-    --color-border: #ccc;
-
+    --color-text-light: #ecf0f1;
+    --color-text-dark: #34495e;
+    --color-text-muted: #95a5a6;
+    --color-border: #e0e0e0;
+    --color-sidebar-active: #34495e;
+    --color-primary: #3498db;
+    --sidebar-width: 260px;
+    --topbar-height: 70px;
     --font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --border-radius-default: 4px;
-    --box-shadow-default: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --border-radius-default: 5px;
+    --box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }

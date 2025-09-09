@@ -3,42 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel de Administrador - Torres Farma</title>
+    <title>Dashboard - Painel Administrativo</title>
+    
     <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-    <header class="panel-header">
-        <h1>Painel de Controle</h1>
-        <button onclick="logout()" class="btn btn-danger">Sair</button>
-    </header>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="logo">TorresFarma+</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <p class="nav-section-title">GERAL</p>
+                <ul>
+                    <li>
+                        <a href="dashboard.html" class="active">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-box-archive"></i>
+                            <span>Cadastros</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-clipboard-list"></i>
+                            <span>Pedidos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Usuários</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>Configurações</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
 
-    <main class="dashboard-main">
-        <section id="product-management" class="panel-container">
-            <h2>Gerenciamento de Produtos</h2>
-            <form id="add-product-form">
-                <input type="text" id="product-name" class="form-input" placeholder="Nome do Produto" required>
-                <input type="number" id="product-price" class="form-input" placeholder="Preço (Ex: 24.99)" step="0.01" required>
-                <textarea id="product-description" class="form-textarea" placeholder="Descrição do Produto"></textarea>
-                <input type="text" id="product-image-url" class="form-input" placeholder="URL da Imagem do Produto">
-                <button type="submit" class="btn btn-success">Adicionar Produto</button>
-            </form>
-
-            <h3 id="product-list-title">Lista de Produtos</h3>
-            <div id="product-list">
+        <div class="main-content">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+                    <i class="fa-solid fa-search"></i>
                 </div>
-        </section>
-    </main>
+                <div class="topbar-right">
+                    <div class="user-info">
+                        <span>Bem-vindo, Administrador</span>
+                    </div>
+                    <img src="https://i.pravatar.cc/40" alt="Avatar" class="user-avatar">
+                </div>
+            </header>
+
+            <main class="page-content">
+                <div class="page-header">
+                    <h1>Dashboard</h1>
+                    <p>Aqui você pode ver uma visão geral do seu painel.</p>
+                </div>
+
+                <div class="content-body">
+                    <p>Conteúdo do Dashboard em desenvolvimento...</p>
+                </div>
+            </main>
+        </div>
+    </div>
 
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-
     <script src="../js/firebase-config.js"></script>
-
     <script src="js/auth.js"></script>
-
     <script src="js/dashboard.js"></script>
-
 </body>
 </html>

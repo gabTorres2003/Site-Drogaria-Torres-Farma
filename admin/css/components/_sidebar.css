@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
-    transition: width 0.3s ease-in-out; 
+    transition: width 0.3s ease-in-out;
 }
 
 .sidebar-header {
@@ -14,29 +14,54 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    padding: 0 1.5rem;
     flex-shrink: 0;
     border-bottom: 1px solid #3a536e;
     overflow: hidden; 
+    position: relative;
 }
 
-.logo-img {
-    height: 45px;
-    max-width: 80%;
+.sidebar-logo-expanded {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar-logo-expanded .logo-img-full {
+    height: 45px; 
     object-fit: contain;
-    transition: opacity 0.3s ease-in-out; 
 }
 
+.sidebar-logo-expanded .logo-title {
+    color: var(--color-white);
+    font-size: 1.2rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.sidebar-logo-collapsed {
+    display: none; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar-logo-collapsed .logo-img-small {
+    height: 45px; 
+    object-fit: contain;
+}
 .sidebar-nav .nav-section-title {
     padding: 1rem 1.5rem 0.5rem;
     font-size: 0.75rem;
     text-transform: uppercase;
     color: var(--color-text-muted);
     letter-spacing: 1px;
-    white-space: nowrap; 
+    white-space: nowrap;
     transition: opacity 0.3s ease-in-out;
 }
-
 .sidebar-nav ul {
     list-style: none;
     padding: 0;
@@ -75,9 +100,22 @@
     width: var(--sidebar-width-collapsed);
 }
 
-.admin-container.sidebar-collapsed .logo-img {
-    opacity: 0; 
+.admin-container.sidebar-collapsed .sidebar-header {
+    justify-content: center;
+    padding: 0; 
 }
+
+.admin-container.sidebar-collapsed .sidebar-logo-expanded {
+    opacity: 0; 
+    pointer-events: none;
+    display: none; 
+}
+
+.admin-container.sidebar-collapsed .sidebar-logo-collapsed {
+    display: flex; 
+    opacity: 1; 
+}
+
 
 .admin-container.sidebar-collapsed .sidebar-nav .nav-section-title {
     opacity: 0;
@@ -87,7 +125,7 @@
 }
 
 .admin-container.sidebar-collapsed .sidebar-nav a {
-    justify-content: center; 
+    justify-content: center;
 }
 
 .admin-container.sidebar-collapsed .sidebar-nav a span {

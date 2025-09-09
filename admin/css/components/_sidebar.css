@@ -1,0 +1,99 @@
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--color-sidebar-bg);
+    color: var(--color-text-light);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    transition: width 0.3s ease-in-out; 
+}
+
+.sidebar-header {
+    height: var(--topbar-height);
+    background-color: var(--color-sidebar-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    flex-shrink: 0;
+    border-bottom: 1px solid #3a536e;
+    overflow: hidden; 
+}
+
+.logo-img {
+    height: 45px;
+    max-width: 80%;
+    object-fit: contain;
+    transition: opacity 0.3s ease-in-out; 
+}
+
+.sidebar-nav .nav-section-title {
+    padding: 1rem 1.5rem 0.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 1px;
+    white-space: nowrap; 
+    transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.sidebar-nav a:hover {
+    background-color: var(--color-sidebar-active);
+}
+
+.sidebar-nav a.active {
+    background-color: var(--color-sidebar-active);
+    font-weight: 500;
+}
+
+.sidebar-nav a i {
+    font-size: 1.1rem;
+    margin-right: 1rem;
+    width: 20px;
+    text-align: center;
+    transition: margin 0.3s ease-in-out;
+}
+
+.admin-container.sidebar-collapsed .sidebar {
+    width: var(--sidebar-width-collapsed);
+}
+
+.admin-container.sidebar-collapsed .logo-img {
+    opacity: 0; 
+}
+
+.admin-container.sidebar-collapsed .sidebar-nav .nav-section-title {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.admin-container.sidebar-collapsed .sidebar-nav a {
+    justify-content: center; 
+}
+
+.admin-container.sidebar-collapsed .sidebar-nav a span {
+    display: none; 
+}
+
+.admin-container.sidebar-collapsed .sidebar-nav a i {
+    margin-right: 0; 
+}

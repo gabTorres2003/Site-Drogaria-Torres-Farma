@@ -40,3 +40,10 @@
     margin: 0;
     font-size: 16px;
 }
+
+.content-body {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--border-radius-default);
+    box-shadow: var(--box-shadow-light);
+}

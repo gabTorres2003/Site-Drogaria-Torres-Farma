@@ -73,16 +73,83 @@
                 </div>
             </header>
 
-            <main class="page-content">
-                <div class="page-header">
-                    <h1>Dashboard</h1>
-                    <p>Aqui você pode ver uma visão geral do seu painel.</p>
-                </div>
+           <main class="page-content">
+    <div class="page-header">
+        <h1>Dashboard</h1>
+        <p>Visão geral e principais métricas da sua loja.</p>
+    </div>
 
-                <div class="content-body">
-                    <p>Conteúdo do Dashboard em desenvolvimento...</p>
+    <div class="dashboard-grid">
+        <div class="stat-card">
+            <h4>Faturamento do Dia</h4>
+            <p id="faturamento-dia">R$ 0,00</p>
+            <i class="fa-solid fa-dollar-sign card-icon"></i>
+        </div>
+        <div class="stat-card">
+            <h4>Pedidos Hoje</h4>
+            <p id="pedidos-hoje">0</p>
+            <i class="fa-solid fa-box card-icon"></i>
+        </div>
+        <div class="stat-card">
+            <h4>Pedidos no Mês</h4>
+            <p id="pedidos-mes">0</p>
+            <i class="fa-solid fa-calendar-days card-icon"></i>
+        </div>
+        <div class="stat-card">
+            <h4>Cupons Aplicados (hoje)</h4>
+            <p id="cupons-hoje">R$ 0,00</p>
+            <i class="fa-solid fa-ticket card-icon"></i>
+        </div>
+
+        <div class="panel-card large-card">
+            <h4>Status dos Pedidos do Dia</h4>
+            <div class="order-status-grid">
+                <div class="status-item">
+                    <span class="status-label">Em Separação</span>
+                    <span class="status-value" id="status-separacao">0</span>
                 </div>
-            </main>
+                <div class="status-item">
+                    <span class="status-label">Entregues</span>
+                    <span class="status-value" id="status-entregues">0</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Cancelados</span>
+                    <span class="status-value" id="status-cancelados">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel-card">
+            <h4>Top 5 Produtos (por Vendas)</h4>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody id="top-produtos-table">
+                    </tbody>
+            </table>
+        </div>
+
+        <div class="panel-card">
+            <h4>Ranking de Clientes (Top 5)</h4>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Pedidos</th>
+                        <th>Valor Gasto</th>
+                    </tr>
+                </thead>
+                <tbody id="top-clientes-table">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</main>
         </div>
     </div>
 

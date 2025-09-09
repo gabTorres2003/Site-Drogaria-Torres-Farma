@@ -24,7 +24,7 @@
 .sidebar-logo-expanded {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     transition: opacity 0.3s ease-in-out;
 }
 

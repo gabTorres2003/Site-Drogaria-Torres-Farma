@@ -1,0 +1,28 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-default);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.login-container h2 {
+    text-align: center;
+    color: var(--color-dark);
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+#login-form .btn {
+    width: 100%;
+}

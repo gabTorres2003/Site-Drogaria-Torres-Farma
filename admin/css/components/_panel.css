@@ -1,0 +1,21 @@
+.panel-header {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.panel-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.panel-container {
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-default);
+}

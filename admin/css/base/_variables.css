@@ -8,10 +8,18 @@
     --color-border: #e0e0e0;
     --color-sidebar-active: #34495e;
     --color-primary: #3498db;
-    --sidebar-width: 260px;
-    --sidebar-width-collapsed: 60px; 
+    --color-primary-hover: #0056b3;
+    --color-success: #28a745;
+    --color-success-hover: #218838;
+    --color-danger: #dc3545;
+    --color-danger-hover: #c82333;
+
+    --sidebar-width: 266px;
+    --sidebar-width-collapsed: 60px;
     --topbar-height: 70px;
+    
     --font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
     --border-radius-default: 5px;
     --box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }

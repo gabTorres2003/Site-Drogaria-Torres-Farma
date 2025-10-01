@@ -10,7 +10,7 @@
     background: var(--color-white);
     padding: 40px;
     border-radius: 8px;
-    box-shadow: var(--box-shadow-default);
+    box-shadow: var(--box-shadow-light);
     width: 100%;
     max-width: 400px;
     box-sizing: border-box;

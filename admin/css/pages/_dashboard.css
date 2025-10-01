@@ -1,6 +1,6 @@
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .panel-card.large-card {
-    grid-column: span 4; 
+    grid-column: 1 / -1;
 }
 
 .panel-card h4 {
@@ -59,7 +59,7 @@
 
 .order-status-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     text-align: center;
 }
 

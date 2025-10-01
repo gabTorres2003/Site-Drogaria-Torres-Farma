@@ -1,156 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard - Painel Administrativo</title>
-    
-    <link rel="stylesheet" href="css/style.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
     <div class="admin-container">
-        <aside class="sidebar">
-           <div class="sidebar-header">
-        <div class="sidebar-logo-expanded">
-            <img src="../assets/img/logo-torres.png" alt="Logo Torres Farma" class="logo-img-full">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="sidebar-logo-expanded">
+            <img
+              src="../assets/img/logo-torres.png"
+              alt="Logo Torres Farma"
+              class="logo-img-full"
+            />
             <span class="logo-title">TorresFarma Adm</span>
+          </div>
+          <div class="sidebar-logo-collapsed">
+            <img
+              src="../assets/img/logo-torres.png"
+              alt="Logo Minimizada"
+              class="logo-img-small"
+            />
+          </div>
         </div>
-        <div class="sidebar-logo-collapsed">
-            <img src="../assets/img/logo-torres.png" alt="Logo Minimizada" class="logo-img-small">
-        </div>
-    </div>
-            <nav class="sidebar-nav">
-                <p class="nav-section-title">GERAL</p>
-                <ul>
-                    <li>
-                        <a href="dashboard.html" class="active">
-                            <i class="fa-solid fa-chart-pie"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa-solid fa-box-archive"></i>
-                            <span>Cadastros</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa-solid fa-clipboard-list"></i>
-                            <span>Pedidos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa-solid fa-users"></i>
-                            <span>Usuários</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa-solid fa-gear"></i>
-                            <span>Configurações</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
+        <nav class="sidebar-nav">
+          <p class="nav-section-title">GERAL</p>
+          <ul>
+            <li>
+              <a href="dashboard.html" class="active">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Cadastros</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>Pedidos</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-users"></i>
+                <span>Usuários</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
 
-        <div class="main-content">
-            <header class="topbar">
-                <div class="topbar-left">
-                    <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
-                    <i class="fa-solid fa-search"></i>
-                </div>
-                <div class="topbar-right">
-                    <div class="user-info">
-                        <span>Bem-vindo, Administrador</span>
-                    </div>
-                    <img src="https://i.pravatar.cc/40" alt="Avatar" class="user-avatar">
-                </div>
-            </header>
-
-           <main class="page-content">
-    <div class="page-header">
-        <h1>Dashboard</h1>
-        <p>Visão geral e principais métricas da sua loja.</p>
-    </div>
-
-    <div class="dashboard-grid">
-        <div class="stat-card">
-            <h4>Faturamento do Dia</h4>
-            <p id="faturamento-dia">R$ 0,00</p>
-            <i class="fa-solid fa-dollar-sign card-icon"></i>
-        </div>
-        <div class="stat-card">
-            <h4>Pedidos Hoje</h4>
-            <p id="pedidos-hoje">0</p>
-            <i class="fa-solid fa-box card-icon"></i>
-        </div>
-        <div class="stat-card">
-            <h4>Pedidos no Mês</h4>
-            <p id="pedidos-mes">0</p>
-            <i class="fa-solid fa-calendar-days card-icon"></i>
-        </div>
-        <div class="stat-card">
-            <h4>Cupons Aplicados (hoje)</h4>
-            <p id="cupons-hoje">R$ 0,00</p>
-            <i class="fa-solid fa-ticket card-icon"></i>
-        </div>
-
-        <div class="panel-card large-card">
-            <h4>Status dos Pedidos do Dia</h4>
-            <div class="order-status-grid">
-                <div class="status-item">
-                    <span class="status-label">Em Separação</span>
-                    <span class="status-value" id="status-separacao">0</span>
-                </div>
-                <div class="status-item">
-                    <span class="status-label">Entregues</span>
-                    <span class="status-value" id="status-entregues">0</span>
-                </div>
-                <div class="status-item">
-                    <span class="status-label">Cancelados</span>
-                    <span class="status-value" id="status-cancelados">0</span>
-                </div>
+      <div class="main-content">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="menu-toggle" id="menu-toggle">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <i class="fa-solid fa-search"></i>
+          </div>
+          <div class="topbar-right">
+            <div class="user-info">
+              <span>Bem-vindo, Administrador</span>
             </div>
-        </div>
-        
-        <div class="panel-card">
-            <h4>Top 5 Produtos (por Vendas)</h4>
-            <table class="data-table">
-                <thead>
-                    <tr>
-                        <th>Produto</th>
-                        <th>Quantidade</th>
-                        <th>Valor</th>
-                    </tr>
-                </thead>
-                <tbody id="top-produtos-table">
-                    </tbody>
-            </table>
-        </div>
+            <img
+              src="https://i.pravatar.cc/40"
+              alt="Avatar"
+              class="user-avatar"
+            />
+          </div>
+        </header>
 
-        <div class="panel-card">
-            <h4>Ranking de Clientes (Top 5)</h4>
-            <table class="data-table">
+        <main class="page-content">
+          <div class="page-header">
+            <h1>Dashboard</h1>
+            <p>Visão geral e principais métricas da sua loja.</p>
+          </div>
+
+          <div class="dashboard-grid">
+            <div class="stat-card">
+              <h4>Faturamento do Dia</h4>
+              <p id="faturamento-dia">R$ 0,00</p>
+              <i class="fa-solid fa-dollar-sign card-icon"></i>
+            </div>
+            <div class="stat-card">
+              <h4>Pedidos Hoje</h4>
+              <p id="pedidos-hoje">0</p>
+              <i class="fa-solid fa-box card-icon"></i>
+            </div>
+            <div class="stat-card">
+              <h4>Pedidos no Mês</h4>
+              <p id="pedidos-mes">0</p>
+              <i class="fa-solid fa-calendar-days card-icon"></i>
+            </div>
+            <div class="stat-card">
+              <h4>Cupons Aplicados (hoje)</h4>
+              <p id="cupons-hoje">R$ 0,00</p>
+              <i class="fa-solid fa-ticket card-icon"></i>
+            </div>
+
+            <div class="panel-card large-card">
+              <h4>Status dos Pedidos do Dia</h4>
+              <div class="order-status-grid">
+                <div class="status-item">
+                  <span class="status-label">Em Separação</span>
+                  <span class="status-value" id="status-separacao">0</span>
+                </div>
+                <div class="status-item">
+                  <span class="status-label">Entregues</span>
+                  <span class="status-value" id="status-entregues">0</span>
+                </div>
+                <div class="status-item">
+                  <span class="status-label">Cancelados</span>
+                  <span class="status-value" id="status-cancelados">0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel-card">
+              <h4>Top 5 Produtos (por Vendas)</h4>
+              <table class="data-table">
                 <thead>
-                    <tr>
-                        <th>Cliente</th>
-                        <th>Pedidos</th>
-                        <th>Valor Gasto</th>
-                    </tr>
+                  <tr>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                  </tr>
                 </thead>
-                <tbody id="top-clientes-table">
-                    </tbody>
-            </table>
-        </div>
-    </div>
-</main>
-        </div>
+                <tbody id="top-produtos-table"></tbody>
+              </table>
+            </div>
+
+            <div class="panel-card">
+              <h4>Ranking de Clientes (Top 5)</h4>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Cliente</th>
+                    <th>Pedidos</th>
+                    <th>Valor Gasto</th>
+                  </tr>
+                </thead>
+                <tbody id="top-clientes-table"></tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
@@ -159,6 +171,6 @@
     <script src="../js/firebase-config.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/dashboard.js"></script>
-    <script src="js/ui.js"></script> </body>
-</body>
+    <script src="js/ui.js"></script>
+  </body>
 </html>

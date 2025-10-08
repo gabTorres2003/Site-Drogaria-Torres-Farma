@@ -1,36 +1,51 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.getElementById('login-form');
-    const errorMessage = document.getElementById('error-message');
+import { supabase } from './supabase-config.js';
 
-    if (loginForm) {
-        loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+const loginForm = document.getElementById('login-form');
+const errorMessage = document.getElementById('error-message');
+const logoutButton = document.getElementById('logout-button');
 
-            auth.signInWithEmailAndPassword(email, password)
-                .then((userCredential) => {
-                    window.location.href = 'dashboard.html';
-                })
-                .catch((error) => {
-                    errorMessage.textContent = 'E-mail ou senha incorretos.';
-                });
+if (loginForm) {
+    loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        const { data, error } = await supabase.auth.signInWithPassword({
+            email: email,
+            password: password,
         });
-    }
 
-    if (window.location.pathname.includes('dashboard.html')) {
-        auth.onAuthStateChanged((user) => {
-            if (!user) {
-                window.location.href = 'index.html';
-            }
-        });
-    }
-});
+        if (error) {
+            console.error('Erro no login:', error.message);
+            errorMessage.textContent = 'E-mail ou senha incorretos.';
+        } else {
+            window.location.href = 'dashboard.html';
+        }
+    });
+}
 
-function logout() {
-    auth.signOut().then(() => {
+const checkUser = async () => {
+    const { data, error } = await supabase.auth.getSession();
+
+    if (!data.session) {
         window.location.href = 'index.html';
-    }).catch((error) => {
-        console.error('Erro ao fazer logout:', error);
+    }
+};
+
+if (!window.location.pathname.endsWith('index.html') && !window.location.pathname.endsWith('/')) {
+    checkUser();
+}
+
+if (logoutButton) {
+    logoutButton.addEventListener('click', async (e) => {
+        e.preventDefault();
+        
+        const { error } = await supabase.auth.signOut();
+
+        if (error) {
+            console.error('Erro ao fazer logout:', error.message);
+        } else {
+            window.location.href = 'index.html';
+        }
     });
 }

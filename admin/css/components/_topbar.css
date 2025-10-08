@@ -41,3 +41,10 @@
     height: 40px;
     border-radius: 50%;
 }
+
+.btn-logout { 
+  display: flex; align-items: center; gap: 8px; 
+  text-decoration: none; color: var(--color-danger); 
+  background-color: #fbe9e9; padding: 8px 12px; border-radius: 6px;
+}
+.btn-logout:hover { background-color: #f8d7da; }

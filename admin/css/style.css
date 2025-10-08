@@ -3,9 +3,9 @@
 @import url('components/_buttons.css');
 @import url('components/_forms.css');
 @import url('components/_panel.css');
+@import url('components/_sidebar.css');
+@import url('components/_topbar.css');
 @import url('layout/_admin.css');
-@import url('layout/_sidebar.css');
-@import url('layout/_topbar.css');
 @import url('pages/_login.css');
 @import url('pages/_dashboard.css');
 @import url('pages/_cadastros.css');

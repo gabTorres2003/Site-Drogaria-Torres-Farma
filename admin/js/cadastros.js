@@ -1,4 +1,4 @@
-import { supabase } from '/js/supabase-config.js';
+import { supabase } from './supabase-config.js';
 
 const formProduto = document.getElementById('form-produto');
 const tabelaProdutos = document.getElementById('tabela-produtos');

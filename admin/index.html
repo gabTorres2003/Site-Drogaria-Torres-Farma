@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login - Painel Administrativo</title>
-    <link rel="stylesheet" href="/admin/css/style.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
   </head>
+
   <body class="login-page">
-    
+
     <img
-      src="/website/assets/img/logo-torres.png"
+      src="assets/img/logo-torres.png"
       alt="Logo Torres Farma"
       class="login-logo"
     />
@@ -32,6 +35,7 @@
             required
           />
         </div>
+
         <div class="form-group">
           <label for="password">Senha</label>
           <input
@@ -43,11 +47,13 @@
             required
           />
         </div>
+
         <button type="submit" class="btn btn-primary">Entrar</button>
         <div id="error-message"></div>
       </form>
     </div>
 
-    <script type="module" src="/admin/js/auth.js"></script>
+    <script type="module" src="js/auth.js"></script>
+
   </body>
 </html>

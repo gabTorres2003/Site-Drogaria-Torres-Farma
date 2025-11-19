@@ -1,222 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastros - Painel Administrativo</title>
-    <link rel="stylesheet" href="/admin/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-  </head>
-  <body>
-    <div class="admin-container">
-      <aside class="sidebar">
-        <div class="sidebar-header">
-          <div class="sidebar-logo-expanded">
-            <img
-              src="/website/assets/img/logo-torres.png"
-              alt="Logo Torres Farma"
-              class="logo-img-full"
-            />
-            <span class="logo-title">TorresFarma Adm</span>
-          </div>
-          <div class="sidebar-logo-collapsed">
-            <img
-              src="../website/assets/img/logo-torres.png"
-              alt="Logo Minimizada"
-              class="logo-img-small"
-            />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastros - Painel Administrativo</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+  <div class="admin-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo-expanded">
+          <img src="assets/img/logo-torres.png" alt="Logo Torres Farma" class="logo-img-full" />
+          <span class="logo-title">TorresFarma Adm</span>
         </div>
-        <nav class="sidebar-nav">
-          <p class="nav-section-title">GERAL</p>
-          <ul>
-            <li>
-              <a href="dashboard.html"
-                ><i class="fa-solid fa-chart-pie"></i><span>Dashboard</span></a
-              >
-            </li>
-            <li>
-              <a href="cadastros.html" class="active"
-                ><i class="fa-solid fa-box-archive"></i
-                ><span>Cadastros</span></a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><i class="fa-solid fa-clipboard-list"></i
-                ><span>Pedidos</span></a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><i class="fa-solid fa-users"></i><span>Usuários</span></a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><i class="fa-solid fa-gear"></i><span>Configurações</span></a
-              >
-            </li>
-          </ul>
-        </nav>
-      </aside>
+        <div class="sidebar-logo-collapsed">
+          <img src="assets/img/logo-torres.png" alt="Logo Minimizada" class="logo-img-small" />
+        </div>
+      </div>
 
-      <div class="main-content">
-        <header class="topbar">
-          <div class="topbar-left">
-            <button class="menu-toggle" id="menu-toggle">
-              <i class="fa-solid fa-bars"></i>
-            </button>
-          </div>
-          <div class="topbar-right">
-            <div class="user-info">
-              <span>Bem-vindo, Administrador</span>
-            </div>
-            <a href="#" id="logout-button" class="btn-logout">
-              <i class="fa-solid fa-right-from-bracket"></i>
-              <span>Sair</span>
-            </a>
-            <img
-              src="https://i.pravatar.cc/40"
-              alt="Avatar"
-              class="user-avatar"
-            />
-          </div>
-        </header>
+      <nav class="sidebar-nav">
+        <p class="nav-section-title">GERAL</p>
+        <ul>
+          <li><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i><span>Dashboard</span></a></li>
+          <li><a href="cadastros.html" class="active"><i class="fa-solid fa-box-archive"></i><span>Cadastros</span></a></li>
+        </ul>
+      </nav>
+    </aside>
 
-        <main class="page-content">
-          <div class="page-header">
-            <h1>Gestão de Cadastros</h1>
-            <p>
-              Adicione, edite e remova produtos, promoções e cupons da sua loja.
-            </p>
-          </div>
+    <div class="main-content">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="topbar-right">
+          <div class="user-info"><span>Bem-vindo, Administrador</span></div>
+          <a href="#" id="logout-button" class="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i><span>Sair</span>
+          </a>
+          <img src="https://i.pravatar.cc/40" alt="Avatar" class="user-avatar" />
+        </div>
+      </header>
 
-          <div class="panel-card large-card">
-            <h4>Cadastrar Novo Produto</h4>
-            <form id="form-produto">
-              <input type="hidden" id="produto-id" />
-              <div class="form-grid">
-                <div class="form-group">
-                  <label for="produto-nome">Nome do Produto</label>
-                  <input
-                    type="text"
-                    id="produto-nome"
-                    class="form-input"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="produto-codigo">Código do Produto</label>
-                  <input type="text" id="produto-codigo" class="form-input" />
-                </div>
-                <div class="form-group">
-                  <label for="produto-categoria">Categoria</label>
-                  <input
-                    type="text"
-                    id="produto-categoria"
-                    class="form-input"
-                    placeholder="Ex: Medicamentos"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="produto-tipo">Tipo</label>
-                  <input
-                    type="text"
-                    id="produto-tipo"
-                    class="form-input"
-                    placeholder="Ex: Genérico"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="produto-venda">Valor de Venda (R$)</label>
-                  <input
-                    type="number"
-                    step="0.01"
-                    id="produto-venda"
-                    class="form-input"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="produto-promocional"
-                    >Valor Promocional (R$)</label
-                  >
-                  <input
-                    type="number"
-                    step="0.01"
-                    id="produto-promocional"
-                    class="form-input"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="produto-estoque">Estoque</label>
-                  <input
-                    type="number"
-                    id="produto-estoque"
-                    class="form-input"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="produto-imagem">Imagem do Produto</label>
-                  <input type="file" id="produto-imagem" class="form-input" />
-                </div>
+      <main class="page-content">
+        <div class="page-header">
+          <h1>Gestão de Cadastros</h1>
+          <p>Adicione, edite e remova produtos.</p>
+        </div>
+
+        <div class="panel-card large-card">
+          <h4>Cadastrar Novo Produto</h4>
+
+          <form id="formCadastro">
+            <input type="hidden" id="produto-id" />
+            
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="nome">Nome do Produto</label>
+                <input type="text" id="nome" class="form-input" required />
               </div>
               <div class="form-group">
-                <label for="produto-descricao">Descrição Resumida</label>
-                <textarea
-                  id="produto-descricao"
-                  class="form-textarea"
-                ></textarea>
+                <label for="codigo">Código</label>
+                <input type="text" id="codigo" class="form-input" />
               </div>
-              <div class="form-actions">
-                <div class="form-group-inline">
-                  <input type="checkbox" id="produto-ativo" checked />
-                  <label for="produto-ativo">Produto Ativo</label>
-                </div>
-                <div>
-                  <button type="submit" class="btn btn-primary">
-                    Salvar Produto
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    id="btn-limpar-form"
-                  >
-                    Limpar
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
 
-          <div class="panel-card large-card">
-            <h4>Produtos Cadastrados</h4>
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>Nome</th>
-                  <th>Categoria</th>
-                  <th>Valor</th>
-                  <th>Estoque</th>
-                  <th>Status</th>
-                  <th>Ações</th>
-                </tr>
-              </thead>
-              <tbody id="tabela-produtos"></tbody>
-            </table>
-          </div>
-        </main>
-      </div>
+              <div class="form-group">
+                <label>Categoria</label>
+                <select id="categoria">
+                  <option value="primeiros_socorros">Primeiros Socorros</option>
+                  <option value="saude_feminina">Saúde Feminina</option>
+                  <option value="higiene_pessoal">Higiene Pessoal</option>
+                  <option value="mamae_bebe">Cuidados Mamãe e Bebê</option>
+                  <option value="vitaminas_suplementos">Vitaminas e Suplementos</option>
+                  <option value="genericos">Genéricos</option>
+                  <option value="novidades">Novidades</option>
+                  <option value="mais_vendidos">Mais Vendidos</option>
+                  <option value="promocao">Promoção</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="tipo">Tipo</label>
+                <input type="text" id="tipo" class="form-input" />
+              </div>
+
+              <div class="form-group">
+                <label for="valor_venda">Valor de Venda (R$)</label>
+                <input type="number" step="0.01" id="valor_venda" class="form-input" required />
+              </div>
+
+              <div class="form-group">
+                <label for="valor_promocional">Valor Promocional</label>
+                <input type="number" step="0.01" id="valor_promocional" class="form-input" />
+              </div>
+
+              <div class="form-group">
+                <label for="estoque">Estoque</label>
+                <input type="number" id="estoque" class="form-input" required />
+              </div>
+
+              <div class="form-group">
+                <label for="imagem">Imagem</label>
+                <input type="file" id="imagem" class="form-input" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="descricao">Descrição</label>
+              <textarea id="descricao" class="form-textarea"></textarea>
+            </div>
+
+            <img id="previewImg" style="max-width:150px; display:none; margin-top:10px" />
+
+            <div class="form-actions">
+              <div class="form-group-inline">
+                <input type="checkbox" id="ativo" checked />
+                <label for="ativo">Produto Ativo</label>
+              </div>
+
+              <div>
+                <button class="btn btn-primary" type="submit">Salvar</button>
+                <button class="btn btn-secondary" id="btn-limpar-form" type="button">Limpar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="panel-card large-card">
+          <h4>Produtos Cadastrados</h4>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Código</th>
+                <th>Categoria</th>
+                <th>Valor</th>
+                <th>Estoque</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-produtos"></tbody>
+          </table>
+        </div>
+      </main>
     </div>
+  </div>
 
-    <script type="module" src="/admin/js/supabase-config.js"></script>
-    <script type="module" src="/admin/js/auth.js"></script>
-    <script type="module" src="/admin/js/ui.js"></script>
-    <script type="module" src="/admin/js/cadastros.js"></script>
-  </body>
+  <script type="module" src="js/supabase-config.js"></script>
+  <script type="module" src="js/auth.js"></script>
+  <script type="module" src="js/ui.js"></script>
+  <script type="module" src="js/cadastros.js"></script>
+</body>
 </html>

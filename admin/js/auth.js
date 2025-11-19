@@ -7,13 +7,12 @@ const logoutButton = document.getElementById('logout-button');
 if (loginForm) {
     loginForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
         const { data, error } = await supabase.auth.signInWithPassword({
-            email,
-            password,
+            email: email,
+            password: password,
         });
 
         if (error) {
@@ -25,7 +24,7 @@ if (loginForm) {
     });
 }
 
-const protegerRotas = async () => {
+const checkUser = async () => {
     const { data, error } = await supabase.auth.getSession();
 
     if (!data.session) {
@@ -33,16 +32,14 @@ const protegerRotas = async () => {
     }
 };
 
-const paginaAtual = window.location.pathname.split('/').pop();
-
-if (paginaAtual !== 'index.html') {
-    protegerRotas();
+if (!window.location.pathname.endsWith('index.html') && !window.location.pathname.endsWith('/')) {
+    checkUser();
 }
 
 if (logoutButton) {
     logoutButton.addEventListener('click', async (e) => {
         e.preventDefault();
-
+        
         const { error } = await supabase.auth.signOut();
 
         if (error) {

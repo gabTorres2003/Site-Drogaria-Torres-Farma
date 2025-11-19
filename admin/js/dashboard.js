@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const formatCurrency = (value) =>
-    value.toLocaleString("pt-BR", {
+  const formatCurrency = (value) => {
+    return value.toLocaleString("pt-BR", {
       style: "currency",
       currency: "BRL",
     });
+  };
 
-  // DADOS FICTÍCIOS
-  const dados = {
+  const dadosFicticios = {
     faturamentoDia: 7850.55,
     pedidosHoje: 120,
     pedidosMes: 2150,
@@ -32,59 +32,41 @@ document.addEventListener("DOMContentLoaded", function () {
     ],
   };
 
-  // Atualiza KPI’s
-  const ids = {
-    faturamento: "faturamento-dia",
-    pedidosHoje: "pedidos-hoje",
-    pedidosMes: "pedidos-mes",
-    cuponsHoje: "cupons-hoje",
-    separacao: "status-separacao",
-    entregues: "status-entregues",
-    cancelados: "status-cancelados",
-  };
+  document.getElementById("faturamento-dia").textContent = formatCurrency(
+    dadosFicticios.faturamentoDia
+  );
+  document.getElementById("pedidos-hoje").textContent =
+    dadosFicticios.pedidosHoje;
+  document.getElementById("pedidos-mes").textContent =
+    dadosFicticios.pedidosMes;
+  document.getElementById("cupons-hoje").textContent = formatCurrency(
+    dadosFicticios.cuponsHoje
+  );
 
-  if (document.getElementById(ids.faturamento))
-    document.getElementById(ids.faturamento).textContent = formatCurrency(dados.faturamentoDia);
+  document.getElementById("status-separacao").textContent =
+    dadosFicticios.status.separacao;
+  document.getElementById("status-entregues").textContent =
+    dadosFicticios.status.entregues;
+  document.getElementById("status-cancelados").textContent =
+    dadosFicticios.status.cancelados;
 
-  if (document.getElementById(ids.pedidosHoje))
-    document.getElementById(ids.pedidosHoje).textContent = dados.pedidosHoje;
+  const topProdutosTable = document.getElementById("top-produtos-table");
+  dadosFicticios.topProdutos.forEach((produto) => {
+    const row = topProdutosTable.insertRow();
+    row.innerHTML = `
+            <td>${produto.nome}</td>
+            <td>${produto.quantidade}</td>
+            <td>${formatCurrency(produto.valor)}</td>
+        `;
+  });
 
-  if (document.getElementById(ids.pedidosMes))
-    document.getElementById(ids.pedidosMes).textContent = dados.pedidosMes;
-
-  if (document.getElementById(ids.cuponsHoje))
-    document.getElementById(ids.cuponsHoje).textContent = formatCurrency(dados.cuponsHoje);
-
-  if (document.getElementById(ids.separacao))
-    document.getElementById(ids.separacao).textContent = dados.status.separacao;
-
-  if (document.getElementById(ids.entregues))
-    document.getElementById(ids.entregues).textContent = dados.status.entregues;
-
-  if (document.getElementById(ids.cancelados))
-    document.getElementById(ids.cancelados).textContent = dados.status.cancelados;
-
-  // Top produtos
-  const tabelaProdutos = document.getElementById("top-produtos-table");
-  if (tabelaProdutos) {
-    dados.topProdutos.forEach((p) => {
-      const row = tabelaProdutos.insertRow();
-      row.innerHTML = `
-        <td>${p.nome}</td>
-        <td>${p.quantidade}</td>
-        <td>${formatCurrency(p.valor)}</td>`;
-    });
-  }
-
-  // Top clientes
-  const tabelaClientes = document.getElementById("top-clientes-table");
-  if (tabelaClientes) {
-    dados.topClientes.forEach((c) => {
-      const row = tabelaClientes.insertRow();
-      row.innerHTML = `
-        <td>${c.nome}</td>
-        <td>${c.pedidos}</td>
-        <td>${formatCurrency(c.valor)}</td>`;
-    });
-  }
+  const topClientesTable = document.getElementById("top-clientes-table");
+  dadosFicticios.topClientes.forEach((cliente) => {
+    const row = topClientesTable.insertRow();
+    row.innerHTML = `
+            <td>${cliente.nome}</td>
+            <td>${cliente.pedidos}</td>
+            <td>${formatCurrency(cliente.valor)}</td>
+        `;
+  });
 });
